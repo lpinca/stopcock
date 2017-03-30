@@ -1,6 +1,6 @@
 {
   "name": "stopcock",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Limit the execution rate of a function using the leaky bucket algorithm",
   "homepage": "https://github.com/lpinca/stopcock",
   "bugs": "https://github.com/lpinca/stopcock/issues",
