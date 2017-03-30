@@ -1,0 +1,34 @@
+{
+  "name": "stopcock",
+  "version": "0.0.0",
+  "description": "Limit the execution rate of a function using the leaky bucket algorithm",
+  "homepage": "https://github.com/lpinca/stopcock",
+  "bugs": "https://github.com/lpinca/stopcock/issues",
+  "repository": "lpinca/stopcock",
+  "author": "Luigi Pinca",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "token bucket",
+    "rate-limit",
+    "function",
+    "throttle",
+    "promise"
+  ],
+  "scripts": {
+    "test-travis": "istanbul cover -x test.js tape --report lcovonly -- test.js",
+    "coverage": "istanbul cover -x test.js tape -- test.js",
+    "test": "tape test.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "istanbul": "0.4.x",
+    "pre-commit": "1.2.x",
+    "tape": "4.6.x"
+  }
+}
