@@ -4,7 +4,7 @@
 [![Build Status][travis-stopcock-badge]][travis-stopcock]
 [![Coverage Status][coverage-stopcock-badge]][coverage-stopcock]
 
-Limit the execution rate of a function using the leaky bucket algorithm. Useful
+Limit the execution rate of a function using the token bucket algorithm. Useful
 for scenarios such as REST APIs consumption where the amount of requests per
 unit of time should not exceed a given threshold.
 

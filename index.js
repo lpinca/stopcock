@@ -20,7 +20,7 @@ class TokenBucket {
   }
 
   /**
-   * Refill the bucket with a proper amount of tokens.
+   * Refill the bucket with the proper amount of tokens.
    */
   refill() {
     const now = Date.now();
