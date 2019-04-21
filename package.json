@@ -26,6 +26,7 @@
     "index.js"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "nyc": "^14.0.0",
     "tape": "^4.10.1"
   }
