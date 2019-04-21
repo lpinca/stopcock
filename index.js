@@ -24,7 +24,7 @@ class TokenBucket {
    */
   refill() {
     const now = Date.now();
-    const tokens = Math.floor((now - this.last) * this.limit / this.interval);
+    const tokens = Math.floor(((now - this.last) * this.limit) / this.interval);
 
     this.tokens += tokens;
 
@@ -32,7 +32,7 @@ class TokenBucket {
     // `tokens` is rounded downward, so we only add the actual time required by
     // those tokens.
     //
-    this.last += Math.ceil(tokens * this.interval / this.limit);
+    this.last += Math.ceil((tokens * this.interval) / this.limit);
 
     if (this.tokens > this.capacity) {
       this.tokens = this.capacity;
@@ -70,12 +70,15 @@ class TokenBucket {
  * @public
  */
 function stopcock(fn, options) {
-  options = Object.assign({
-    queueSize: Math.pow(2, 32) - 1,
-    bucketSize: 40,
-    interval: 1000,
-    limit: 2
-  }, options);
+  options = Object.assign(
+    {
+      queueSize: Math.pow(2, 32) - 1,
+      bucketSize: 40,
+      interval: 1000,
+      limit: 2
+    },
+    options
+  );
 
   const bucket = new TokenBucket(options);
   const queue = [];
