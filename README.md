@@ -38,21 +38,24 @@ Returns a function which should be called instead of `fn`.
 #### Return value
 
 A function that returns a promise which resolves to the value returned by the
-original `fn` function. When the internal queue is at capacity the returned
-promise is rejected.
+original `fn` function. The returned function has a `size` accessor property
+which returns the internal queue size. When the queue is at capacity the promise
+is rejected.
 
 #### Example
 
 ```js
 const stopcock = require('stopcock');
 
-const get = stopcock(function request(i) {
+function request(i) {
   return Promise.resolve(`${i} - ${new Date().toISOString()}`);
-}, { bucketSize: 5 });
+}
 
 function log(data) {
   console.log(data);
 }
+
+const get = stopcock(request, { bucketSize: 5 });
 
 for (let i = 0; i < 10; i++) {
   get(i).then(log);

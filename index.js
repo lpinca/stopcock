@@ -99,7 +99,7 @@ function stopcock(fn, options) {
     }
   }
 
-  return function limiter() {
+  function limiter() {
     const args = arguments;
 
     return new Promise((resolve, reject) => {
@@ -110,7 +110,11 @@ function stopcock(fn, options) {
       queue.push([this, args, resolve]);
       shift();
     });
-  };
+  }
+
+  Object.defineProperty(limiter, 'size', { get: () => queue.length });
+
+  return limiter;
 }
 
 module.exports = stopcock;
