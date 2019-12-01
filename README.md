@@ -82,6 +82,6 @@ for (let i = 0; i < 10; i++) {
 [npm-stopcock-badge]: https://img.shields.io/npm/v/stopcock.svg
 [npm-stopcock]: https://www.npmjs.com/package/stopcock
 [travis-stopcock-badge]: https://img.shields.io/travis/lpinca/stopcock/master.svg
-[travis-stopcock]: https://travis-ci.org/lpinca/stopcock
+[travis-stopcock]: https://travis-ci.com/lpinca/stopcock
 [coverage-stopcock-badge]: https://img.shields.io/coveralls/lpinca/stopcock/master.svg
 [coverage-stopcock]: https://coveralls.io/r/lpinca/stopcock?branch=master
