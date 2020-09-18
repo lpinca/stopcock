@@ -16,8 +16,7 @@
     "promise"
   ],
   "scripts": {
-    "coverage": "npm test && nyc report --reporter=html",
-    "test": "nyc tape test.js"
+    "test": "c8 --reporter=html --reporter=text tape test.js"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -26,8 +25,8 @@
     "index.js"
   ],
   "devDependencies": {
+    "c8": "^7.3.0",
     "coveralls": "^3.1.0",
-    "nyc": "^15.1.0",
     "tape": "^5.0.1"
   }
 }
