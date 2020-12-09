@@ -1,7 +1,7 @@
 # stopcock
 
 [![Version npm][npm-stopcock-badge]][npm-stopcock]
-[![Build Status][travis-stopcock-badge]][travis-stopcock]
+[![Build Status][ci-stopcock-badge]][ci-stopcock]
 [![Coverage Status][coverage-stopcock-badge]][coverage-stopcock]
 
 Limit the execution rate of a function using the token bucket algorithm. Useful
@@ -81,7 +81,10 @@ for (let i = 0; i < 10; i++) {
 
 [npm-stopcock-badge]: https://img.shields.io/npm/v/stopcock.svg
 [npm-stopcock]: https://www.npmjs.com/package/stopcock
-[travis-stopcock-badge]: https://img.shields.io/travis/lpinca/stopcock/master.svg
-[travis-stopcock]: https://travis-ci.com/lpinca/stopcock
-[coverage-stopcock-badge]: https://img.shields.io/coveralls/lpinca/stopcock/master.svg
+[ci-stopcock-badge]:
+  https://img.shields.io/github/workflow/status/lpinca/stopcock/CI/master?label=CI
+[ci-stopcock]:
+  https://github.com/lpinca/stopcock/actions?query=workflow%3ACI+branch%3Amaster
+[coverage-stopcock-badge]:
+  https://img.shields.io/coveralls/lpinca/stopcock/master.svg
 [coverage-stopcock]: https://coveralls.io/r/lpinca/stopcock?branch=master
