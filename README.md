@@ -82,7 +82,7 @@ for (let i = 0; i < 10; i++) {
 [npm-stopcock-badge]: https://img.shields.io/npm/v/stopcock.svg
 [npm-stopcock]: https://www.npmjs.com/package/stopcock
 [ci-stopcock-badge]:
-  https://img.shields.io/github/workflow/status/lpinca/stopcock/CI/master?label=CI
+  https://img.shields.io/github/actions/workflow/status/lpinca/stopcock/ci.yml?branch=master&label=CI
 [ci-stopcock]:
   https://github.com/lpinca/stopcock/actions?query=workflow%3ACI+branch%3Amaster
 [coverage-stopcock-badge]:
